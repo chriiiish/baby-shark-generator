@@ -22,8 +22,21 @@ Mummy Shark do-do-do-do-do-do
 You get the idea
 ```
 
-## Getting Started
+## About
+Written in C#
+Uses Autofac for dependency injection
 
+    .
+    ├── .vscode
+    ├── services                # The different services used in dependency injection
+    │   ├── LyricsService.cs    # Generates the lyrics
+    │   ├── OutputService.cs    # Formats output to the console
+    │   └── SharkService        # Generates shark types (well, family member types)
+    ├── Program.cs              # The entrypoint for the program
+    └── README.md
+
+
+## Getting Started
 1. Clone the repository
 2. Make sure you have the following installed:
     1. [dotnet sdk or runtime](https://dotnet.microsoft.com/en-us/download)
