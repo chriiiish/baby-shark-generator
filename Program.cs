@@ -1,11 +1,14 @@
 ﻿using System;
+using Autofac;
 
-namespace DependencyInjection
+namespace ColourTeller
 {
     public class Program
     {
         static void Main(string[] args){
-            Console.WriteLine("Its a whole new wooooooorld!");
+
+            var colourService = new ColourService();
+            Console.WriteLine($"Its a whole {colourService.GetColour()} wooooooorld!");
         }
     }
 }
