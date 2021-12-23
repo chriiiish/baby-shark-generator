@@ -1,16 +1,17 @@
 ﻿using System;
 using Autofac;
 
-namespace ColourTeller
+namespace SharkLyricsGenerator
 {
     public class Program
     {
         static void Main(string[] args){
 
-            var colourService = new ColourService();
+            var sharkService = new SharkService();
             var outputService = new OutputService();
+            var lyricsService = new LyricsService(sharkService, outputService);
 
-            outputService.Print($"Its a whole {colourService.GetColour()} wooooooorld!");
+            lyricsService.GenerateLyrics();
         }
     }
 }
