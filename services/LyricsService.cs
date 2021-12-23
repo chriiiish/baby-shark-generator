@@ -7,10 +7,10 @@ namespace SharkLyricsGenerator
 
     public class LyricsService:ILyricsService
     {
-        private SharkService _sharkService;
-        private OutputService _outputService;
+        private ISharkService _sharkService;
+        private IOutputService _outputService;
 
-        public LyricsService(SharkService sharkService, OutputService outputService)
+        public LyricsService(ISharkService sharkService, IOutputService outputService)
         {
             _sharkService = sharkService;
             _outputService = outputService;
