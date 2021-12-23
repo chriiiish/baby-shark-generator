@@ -8,7 +8,9 @@ namespace ColourTeller
         static void Main(string[] args){
 
             var colourService = new ColourService();
-            Console.WriteLine($"Its a whole {colourService.GetColour()} wooooooorld!");
+            var outputService = new OutputService();
+
+            outputService.Print($"Its a whole {colourService.GetColour()} wooooooorld!");
         }
     }
 }
