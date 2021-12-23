@@ -26,6 +26,11 @@ namespace SharkLyricsGenerator
             using(var scope = Container.BeginLifetimeScope())
             {
                 var lyricsService = scope.Resolve<ILyricsService>();
+                var outputService = scope.Resolve<IOutputService>();
+
+                outputService.PrintHeading(
+                    $"{DateTime.Now.ToString("yyyy-MM-dd")} - Baby Shark",
+                    $"Lovingly generated for you by the SharkLyricGenerator @ {DateTime.Now.ToString("hh:mmtt")}");
                 lyricsService.GenerateLyrics();
             }
         }
